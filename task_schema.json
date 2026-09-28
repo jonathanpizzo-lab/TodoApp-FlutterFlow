@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/task_schema.json",
+  "title": "Task",
+  "description": "Schema for a task document in the ToDo app Firestore tasks collection.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "user": {
+      "type": "string",
+      "description": "Firestore document reference to the user who owns this task."
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "completed",
+    "user",
+    "created"
+  ]
+}
